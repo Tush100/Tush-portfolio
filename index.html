@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ogbuji Prince — Full-Stack Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon_clean.png" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #111;
+      padding: 15px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      height: 45px;
+      width: auto;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #00bcd4;
+    }
+    #dark-mode-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding-top: 120px;
+      background: linear-gradient(135deg, #111, #333);
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    .hero-text {
+      max-width: 500px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .hero h1 span {
+      color: #00bcd4;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+    .btn {
+      background: #00bcd4;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #0097a7;
+      transform: translateY(-3px);
+    }
+    .profile-img {
+      width: 250px;
+      height: 350px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      border: 2px solid #00bcd4;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 70px 20px;
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      color: #00bcd4;
+      font-weight: 600;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    }
+    .project-card a {
+      color: #00bcd4;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 25px 0;
+      text-align: center;
+    }
+    footer i {
+      margin: 0 8px;
+      padding-top: 10px;
+      font-size: 1.5rem;
+      transition: .3s;
+    }
+    footer i:hover { color: #00bcd4; }
+
+    /* DARK MODE */
+    body.dark-mode {
+      background: #121212;
+      color: #f4f4f4;
+    }
+    body.dark-mode .hero {
+      background: linear-gradient(135deg, #1e1e1e, #333);
+    }
+    body.dark-mode .project-card {
+      background: #1e1e1e;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <img src="tushdev_logo_clean.png" alt="TushDev Logo" class="nav-logo" />
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero reveal" id="home">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Ogbuji Prince</span><br>Full-Stack Developer</h1>
+    <p>I build modern, scalable and user-focused digital experiences through Django, JavaScript and intuitive UI design.</p>
+
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="Ogbuji_Prince_Resume.pdf" class="btn" style="background:#fff;color:#111;margin-left:10px;" download>Download Résumé</a>
+
+    <p style="margin-top:15px;font-size:0.95rem;">
+      <i class="fas fa-map-marker-alt"></i> Enugu, Nigeria •
+      <a href="https://github.com/Tush100" target="_blank" style="color:#00bcd4">GitHub</a> •
+      <a href="https://x.com/Tush_100" target="_blank" style="color:#00bcd4">X</a> •
+      <a href="https://www.linkedin.com/in/prince-norbert" target="_blank" style="color:#00bcd4">LinkedIn</a>
+    </p>
+  </div>
+
+  <img src="profile2.jpeg" alt="Prince" class="profile-img"/>
+</section>
+
+<!-- ABOUT -->
+<section class="reveal" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Full-Stack Developer who enjoys creating powerful, scalable web applications.
+    I specialize in Django for backend development and JavaScript for frontend interfaces.
+    Beyond the featured projects, I’ve also worked on multiple mini-apps, API-driven tools,
+    prototype utilities and experimental builds that focus on performance, UI, and problem-solving,
+    all part of my continuous learning and improvement.
+  </p>
+</section>
+
+<section class="reveal" id="projects">
+  <h2>Selected Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>TushMart</h3>
+      <p>Django-based e-commerce app with auth & product management.</p>
+      <a href="https://tushmart.onrender.com" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Daily Motivation Quote App</h3>
+      <p>Modern frontend app generating motivational quotes dynamically.</p>
+      <a href="https://dailymotivationquote.netlify.app" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Love Calculator</h3>
+      <p>Fun JavaScript project that calculates name compatibility.</p>
+      <a href="https://tushlovecalculator.vercel.app" target="_blank">View Project</a>
+    </div>
+
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+  <h2>Contact Me</h2>
+  <p>You can reach me via email:</p>
+  <p><a href="mailto:princenorbert70@gmail.com" style="color:#00bcd4;font-weight:600;">princenorbert70@gmail.com</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Ogbuji Prince • Delivering scalable & thoughtful digital solutions.</p>
+  <div>
+    <a href="https://github.com/Tush100" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/Tush_100" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/prince-norbert" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:princenorbert70@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+<!-- DARK MODE -->
+<script>
+  const toggle = document.getElementById('dark-mode-toggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.innerHTML = document.body.classList.contains('dark-mode')
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+  });
+
+  ScrollReveal().reveal('.reveal', {
+    duration: 900,
+    distance: '50px',
+    origin: 'bottom',
+    easing: 'ease-in-out',
+    interval: 150
+  });
+</script>
+
+</body>
+</html>
